@@ -1,6 +1,0 @@
-__pycache__/
-*.pyc
-venv/
-.env
-database/securewatch.db
-logs/*.log
