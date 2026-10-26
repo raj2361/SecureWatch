@@ -1,0 +1,16 @@
+# SecureWatch - Server Dependencies
+# Install with: pip install -r requirements.txt --break-system-packages
+
+Flask==3.0.3                # Core web framework
+Werkzeug==3.0.3             # WSGI utils / password hashing (comes with Flask)
+Flask-Cors==4.0.1           # Allow endpoint agents on other hosts to POST logs
+python-dotenv==1.0.1        # Load .env config (secrets, VT API key)
+requests==2.32.3            # Used by VirusTotal integration (server) and agent
+psutil==6.0.0               # Used by the endpoint agent (processes, network, sysinfo)
+
+# --- Added in the "professional SIEM" upgrade (Phase 1: Foundation) ---
+Flask-WTF==1.2.1            # CSRF protection for session-authenticated forms/fetches
+Flask-Limiter==3.8.0        # Rate limiting (login brute-force protection, API abuse)
+
+# NOTE: SQLite ships with Python's standard library (sqlite3) - no separate
+# package is required for the database itself.
